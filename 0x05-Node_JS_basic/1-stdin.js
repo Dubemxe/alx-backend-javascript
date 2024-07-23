@@ -5,7 +5,9 @@ const rdl = readline.createInterface({
     output: process.stdout
 });
 
-rdl.question('Welcome to Holberton School, what is your name?\n', (input) => {
+rdl.write('Welcome to Holberton School, what is your name?\n');
+
+rdl.on('line', (input) => {
 	// print the input to the console
 	console.log(`Your name is: ${input}`);
 
